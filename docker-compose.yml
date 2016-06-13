@@ -1,0 +1,18 @@
+version: '2'
+services:
+  api:
+    build: .
+    image: featureflagman_api_image
+    container_name: featureflagman_api
+    ports:
+      - "8080:8080"
+    container_name: api
+    volumes:
+      - .:/code
+    links:
+      - couch
+  couch:
+    container_name: couch
+    image: couchdb:1.6.1
+    ports:
+      - "5984:5984"

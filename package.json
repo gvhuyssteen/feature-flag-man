@@ -1,0 +1,49 @@
+{
+  "name": "feature-flag-manager-api",
+  "version": "0.0.1",
+  "description": "A feature flag manager where developers can easily toggle features in their applications",
+  "main": "bin/app.bundle.js",
+  "scripts": {
+    "start": "nodemon -L bin/app.bundle.js",
+    "build": "webpack -p --progress",
+    "test": "jasmine-node spec/*/* --autotest --color --watch",
+    "dev": "webpack --progress --color --watch",
+    "dev-server": "nodemon -L src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gerrit_vh@bitbucket.org/gerrit_vh/feature-flag-manager.git"
+  },
+  "keywords": [
+    "feature",
+    "flag",
+    "manager",
+    "ffaas",
+    "saas",
+    "feature",
+    "manager"
+  ],
+  "author": "Gerrit van Huyssteen",
+  "license": "UNLICENSED",
+  "homepage": "https://bitbucket.org/gerrit_vh/feature-flag-manager#readme",
+  "dependencies": {
+    "boom": "^3.2.1",
+    "hapi": "^13.4.1",
+    "hapi-auth-jwt2": "^7.0.1",
+    "hat": "0.0.3",
+    "joi": "^8.4.1",
+    "jsonwebtoken": "^7.0.0",
+    "nano": "^6.2.0",
+    "nodemailer": "^2.4.2",
+    "nodemailer-ses-transport": "^1.3.1",
+    "nodemon": "^1.9.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "json-loader": "^0.5.4",
+    "webpack": "^1.13.1",
+    "webpack-build-notifier": "^0.1.8"
+  }
+}
